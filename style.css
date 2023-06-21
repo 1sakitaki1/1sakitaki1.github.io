@@ -7,9 +7,9 @@ body {
   }
   
 .iphone {
-	max-width: 575px; /* Set a maximum width for the iPhone container */
+	max-width: 426px; /* Set a maximum width for the iPhone container */
 	width: 100%; /* Responsive width */
-	height: 1000px;
+	height: 900px;
 	background-color: #fff;
 	border-radius: 50px;
 	position: relative;
