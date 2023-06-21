@@ -46,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	questionElement.textContent = "";
   }
   
-  // Generate letter initially
-  generateLetter();
+ 
   
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -73,20 +72,42 @@ document.addEventListener("DOMContentLoaded", function() {
 	generateRandomQuestion();
   });
   
-
   document.addEventListener("DOMContentLoaded", function() {
 	var letterElement = document.getElementById("letter");
 	var questionElement = document.getElementById("question");
+	var previousQuestion = ""; // Keep track of the previous question
   
 	function generateRandomQuestion() {
 	  var randomLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
 	  letterElement.textContent = randomLetter;
 	  questionElement.style.opacity = 0;
+	  
 	  setTimeout(function() {
-		questionElement.textContent =
-		  "Name a person that starts with the letter " + randomLetter;
+		var randomQuestion = generateUniqueQuestion(randomLetter);
+		questionElement.textContent = randomQuestion;
 		questionElement.style.opacity = 1;
 	  }, 1000);
+	}
+  
+	// Function to generate a unique question different from the previous one
+	function generateUniqueQuestion(randomLetter) {
+	  var questions = [
+		"Name a person that starts with the letter " + randomLetter,
+		"Name an animal that starts with the letter " + randomLetter,
+		"Name a country that starts with the letter " + randomLetter,
+		"Name a food that starts with the letter " + randomLetter,
+	  ];
+  
+	  var randomIndex;
+	  var randomQuestion;
+  
+	  do {
+		randomIndex = Math.floor(Math.random() * questions.length);
+		randomQuestion = questions[randomIndex];
+	  } while (randomQuestion === previousQuestion); // Repeat until a different question is generated
+  
+	  previousQuestion = randomQuestion; // Update the previous question
+	  return randomQuestion;
 	}
   
 	function resetLetter() {
@@ -97,5 +118,4 @@ document.addEventListener("DOMContentLoaded", function() {
 	generateRandomQuestion();
   });
   
-
   
