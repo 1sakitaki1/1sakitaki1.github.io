@@ -6,12 +6,12 @@ body {
 	height: 100vh;
   }
   
-  .iphone {
-	max-width: 375px; /* Set a maximum width for the iPhone container */
-	width: 90%; /* Responsive width */
-	height: 700px;
+.iphone {
+	max-width: 575px; /* Set a maximum width for the iPhone container */
+	width: 100%; /* Responsive width */
+	height: 1000px;
 	background-color: #fff;
-	border-radius: 30px;
+	border-radius: 50px;
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
