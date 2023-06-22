@@ -22,8 +22,8 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: #f9f9f992;
-	padding: 20px;
-	border-radius: 10px;
+	padding: 2px;
+	border-radius: 102px;
 	box-shadow: 10 0 20px rgba(12, 69, 174, 0.2);
 	display: flex;
 	flex-direction: column;
