@@ -6,35 +6,48 @@ body {
 	height: 100vh;
   }
   
-.iphone {
-	max-width: 426px; /* Set a maximum width for the iPhone container */
-	width: 100%; /* Responsive width */
-	height: 800px;
+  .iphone {
+	max-width: 575px;
+	width: 100%;
+	height: 950px;
 	background-color: #fff;
 	border-radius: 50px;
 	position: relative;
 	overflow: hidden;
-	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
-	margin: 0 auto; /* Center the iPhone container horizontally */
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.10);
+	margin: 0 auto;
   }
   
   .screen {
 	width: 100%;
 	height: 100%;
-	background-color: #f9f9f9;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	background-color: #f9f9f992;
+	padding: 2px;
+	border-radius: 102px;
+	box-shadow: 10 0 20px rgba(12, 69, 174, 0.2);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
   }
+
+  .button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .button-container button {
+	margin: 0 10px; /* Add margin to create space between buttons */
+  }
+  
+
   
   .container {
 	text-align: center;
-	margin-top: 50px;
-	max-width: 80%;
+	margin-top: 70px;
+	max-width: 100%;
   }
   
   h1 {
@@ -46,9 +59,9 @@ body {
   
   #question {
 	font-family: "Arial", sans-serif;
-	font-size: 24px;
+	font-size: 25px;
 	color: #333;
-	margin-bottom: 22px;
+	margin-bottom: 28px;
 	opacity: 0;
 	transition: opacity 0.8s ease-in-out;
   }
@@ -76,17 +89,63 @@ body {
   }
   
   #generate-btn:hover {
-	background-color: #0056b3;
+	background-color: hsla(211, 100%, 35%, 0.09);
 	transform: scale(0.75);
   }
   
   #generate-btn:active {
 	transform: scale(0.95);
   }
+
+  #stop-timer-btn {
+	font-family: "Arial", sans-serif;
+	font-size: 22px;
+	padding: 15px 25px;
+	background-color: #ff5722;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+	box-shadow: inset 0 0 0 0 #007bff;
+	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  #stop-timer-btn:hover {
+	background-color: #990707;
+	transform: scale(0.75);
+  }
+  
+  #stop-timer-btn:active {
+	transform: scale(0.95);
+  }
+
+  #continue-timer-btn {
+	font-family: "Arial", sans-serif;
+	font-size: 22px;
+	padding: 15px 22px;
+	background-color: #ff5722;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+	box-shadow: inset 0 0 0 0 #0ada26;
+	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  #continue-timer-btn:hover {
+	background-color: #098b1b;
+	transform: scale(0.75);
+  }
+  
+  #continue-timer-btn:active {
+	transform: scale(0.95);
+  }
+
+
   
   .button {
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	background-color: #007bff;
 	border-radius: 50%;
 	position: absolute;
@@ -106,5 +165,45 @@ body {
   
   .button:active {
 	transform: scale(0.95);
+  }
+  
+  /* Theme color */
+  :root {
+	--theme-color: #ff5722;
+  }
+  
+  .iphone {
+	background-color: var(--theme-color);
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+  #generate-btn {
+	background-color: var(--theme-color);
+  }
+  
+  #generate-btn:hover {
+	background-color: #e64a19;
+  }
+  
+  .button {
+	background-color: var(--theme-color);
+  }
+  
+  .button:hover {
+	background-color: #e64a19;
+  }
+  
+  /* Timer */
+  #timer {
+	font-family: "Arial", sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 20px;
+	text-align: center;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
   }
   
