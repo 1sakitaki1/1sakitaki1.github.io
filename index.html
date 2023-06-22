@@ -12,7 +12,16 @@
         <h1>Letter Generator</h1>
         <div id="question"></div>
         <div id="letter"></div>
-        <button id="generate-btn" onclick="generateRandomQuestion()">Generate Letters</button>
+        <div class="button-container">
+          <button id="generate-btn" onclick="startTimer()">Generate Letters</button>
+        </div>
+        <div class="timer-buttons">
+          <button id="stop-timer-btn" onclick="stopTimer()">Stop Timer</button>
+          <button id="continue-timer-btn" onclick="continueTimer()">Continue Timer</button>
+        </div>        
+          </div>
+        </div>
+        <div id="timer">10</div>
       </div>
     </div>
     <button id="reset-btn" class="button" onclick="resetLetter()">&#8634;</button>
