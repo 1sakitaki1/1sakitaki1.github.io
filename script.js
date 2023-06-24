@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	var continueTimerButton = document.getElementById("continue-timer-btn");
 	var resetButton = document.getElementById("reset-btn");
 	var timerElement = document.getElementById("timer");
-	var revealAnswerButton = document.getElementById("reveal-answer-btn");
 	var timerInterval;
 	var initialTime = 10; // Initial timer duration
 	var remainingTime = initialTime; // Track the remaining time
@@ -17,13 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	  generateRandomQuestion();
 	});
   
-	revealAnswerButton.addEventListener("click", revealAnswer);
-  
-	resetButton.addEventListener("click", function() {
-	  resetLetter();
-	  resetTimer();
-	});
-  
 	stopTimerButton.addEventListener("click", function() {
 	  stopTimer();
 	});
@@ -32,30 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	  continueTimer();
 	});
   
-	// Function to reveal the answer
-	//function revealAnswer() {
-	  //var question = questionElement.textContent;
-	  //var answer = getAnswerForQuestion(question);
-	  //var answerElement = document.createElement("div");
-	  //answerElement.id = "answer";
-	  //answerElement.textContent = "Answer: " + answer;
-	  //document.body.appendChild(answerElement);
-  
-	  //revealAnswerButton.removeEventListener("click", revealAnswer); // Disable the button after revealing the answer
-	//}
-  
-	// Function to generate the answer
-	//function getAnswerForQuestion(question) {
-	  //var answers = {
-		//"Name a person whose name starts with the letter X": "Xavier",
-		//"Name an animal that starts with the letter X": "X-ray fish",
-		// Add more question-answer pairs as needed
-	  //};
-  
-	  //return answers[question] || "No answer found";
-	//}
-  
-	// ...
+	resetButton.addEventListener("click", function() {
+	  resetLetter();
+	});
   
 	// Function to generate a random letter
 	function generateRandomLetter() {
